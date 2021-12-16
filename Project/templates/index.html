@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space%20Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rammetto%20One">
+    <meta charset="UTF-8">
+    <title>EatFree</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 125px;
+            font-family: "Rammetto One", sans-serif;
+        }
+
+        .first {
+            color: #00364A;
+        }
+
+        .second {
+            color: #00A99D;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 48px;
+            vertical-align: sub;
+            font-family: "Space Mono", sans-serif;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-family: "Space Mono", sans-serif;
+            text-align: center;
+            vertical-align: top;
+        }
+
+        .round {
+            width: 100%;
+            border-radius: 15px;
+            border: none;
+            padding: 5px 5px 5px 25px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 5;
+            background: #DEE6E6;
+        }
+
+        .search input[type=text] {
+            text-indent: 23px;
+            padding: 6px;
+            border: none;
+            margin-top: 8px;
+            margin-right: 16px;
+            font-size: 33px;
+            font-family: "Space Mono", sans-serif;
+        }
+
+        ::placeholder {
+            color: #99B3B3;
+        }
+
+        .search {
+            position: relative;
+            border: none;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 650px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        <span class="first">EAT</span>
+        <span class="second">FREE</span>
+    </h1>
+
+    <h3>FIND YOUR FREE</h3>
+
+    <form id="search-form" name="search" action="/search" method="get">
+        <div class="search">
+            <input type="text" name="q" class="round" placeholder="Search products (e.g. cookies)">
+        </div>
+    </form>
+
+    <h2>{{ query }}</h2>
+
+</body>
+</html>

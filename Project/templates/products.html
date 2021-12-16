@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space%20Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rammetto%20One">
+    <title>EatFree</title>
+    <style>
+        h3 {
+            font-size: 50px;
+            font-family: "Rammetto One", sans-serif;
+            margin-left: 60px;
+            margin-top: 60px;
+            margin-bottom: -10px;
+        }
+
+        .first {
+            color: #00364A;
+        }
+
+        .second {
+            color: #00A99D;
+        }
+
+        h4 {
+            margin-top: 0px;
+            margin-bottom: 70px;
+            margin-left: 60px;
+            font-size: 26px;
+            font-family: "Space Mono", sans-serif;
+        }
+
+        table, th, td {
+            width: 1300px;
+            margin-left: 50px;
+            border-collapse: collapse;
+            font-family: "Space Mono", sans-serif;
+            text-align:left;
+            padding: 10px;
+            padding-bottom: 50px;
+        }
+
+        th {
+            font-size: 26px;
+            padding-bottom: 10px;
+        }
+
+        tr {
+            font-size: 20px;
+            vertical-align: top;
+        }
+
+        td:first-child, th:first-child {
+            border-right: 1px solid black;
+            width: 200px;
+        }
+
+        td:nth-child(2), th:nth-child(2) {
+            border-right: 1px solid black;
+            width: 500px;
+        }
+
+        tr:first-child {
+            border-bottom: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <a href="/" style="text-decoration: none">
+        <h3>
+            <span class="first">EAT</span>
+            <span class="second">FREE</span>
+        </h3>
+    </a>
+
+    <h4>FIND YOUR FREE</h4>
+
+    <table>
+        <tr>
+            <th>LEVEL</th>
+            <th>PRODUCT NAME</th>
+            <th>INGREDIENTS</th>
+        </tr>
+
+        {% for product in dict: %}
+        <tr>
+            <td>{{ product.corn_level }}</td>
+            <td>{{ product.title }}</td>
+            <td>{{ product.ingredients_list }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</body>
+</html>
